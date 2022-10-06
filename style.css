@@ -18,6 +18,7 @@ body{
 .taskbar{
     background-color: #49004d;
     height: 50px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,13 +162,17 @@ li a:hover{
     border-radius: 10px;
     margin-top: 30px;
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1024px) {
     
+    .mid{
+        flex-direction: column;
+        background-size: 850px 400px;
+    }
     .minhaFoto{
-        display: none;
+        margin: 10px;
     }
     .colum-right, .colum-left{
-        flex: 1%;
+        display: none;
     }
     .trabalhos{
         text-align: left;
@@ -175,4 +180,5 @@ li a:hover{
     .taskbar li a{
         padding: 5px;
     }
+
 }
