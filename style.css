@@ -1,7 +1,7 @@
 *{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0 ;
-    color: antiquewhite;
+    color: rgb(255, 255, 255);
     scroll-behavior: smooth;
 }
 body{
@@ -11,9 +11,14 @@ body{
     background-size: 20px 20px;
 }
 .info{
-    background-color: aliceblue;
-    height: 30px;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-size: 10px;
+    color: black;
 }
 .taskbar{
     background-color: #49004d;
@@ -133,14 +138,15 @@ li a:hover{
 .academico{
     border: #FFF solid 2px;
     margin: 10px;
+    padding: 10px;
 }
 .academico h1{
     
     text-align :center;
     background-color: #70047244;
-    
-
 }
+
+
 .carrosel-imagens{
     display: flex;
     align-items: center;
@@ -155,18 +161,44 @@ li a:hover{
 .container-conhecimentos{
 
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.685); /* Black w/opacity/see-through */
+    background-color: rgba(0, 0, 0, 0.466); /* Black w/opacity/see-through */
 
     height: 500px;
     width: 100%;
     border-radius: 10px;
     margin-top: 30px;
+    
+}
+.conhecimentos{
+    position: relative;
+}
+#conhecimentos-top{
+    text-align: center;
+    padding: 20px;
+}
+.conhecimentos div{
+
+    background-color: rgb(4, 0, 255);
+    width: 300px;
+    height: 5px;
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    border-radius: 10px;
+
+    text-indent: 1.5em;
+    
+}
+.conhecimentos div span{
+    position: absolute;
+    top: -20px;
+    left: -23px;
 }
 @media screen and (max-width: 1024px) {
     
     .mid{
         flex-direction: column;
-        background-size: 850px 400px;
+        background-size: 800px 400px;
     }
     .minhaFoto{
         margin: 10px;
