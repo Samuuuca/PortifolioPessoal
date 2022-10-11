@@ -82,7 +82,7 @@ function fetchApi(url) {
     .then((data) => {
       let tempInCelsius = ((5/9) * (data.main.temp-32)).toFixed(1);
 
-      if( result >= 7 && result <= 18){
+      if( result >= 7 && result <= 17){
         if (tempInCelsius >= 20) {
           
           ImgClimate.src = 'img/cliamte/sol-quente.png'
