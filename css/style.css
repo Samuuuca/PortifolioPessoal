@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0 ;
+    color: rgb(255, 255, 255);
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #7f067f;
+    background-image: url(../img/pattern.png);
+    background-blend-mode: multiply;
+    background-size: 20px 20px;
+}
+.info{
+    background-color: #49004d;
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.infoClimate{
+    
+    display: flex;
+    align-items: center;
+}
+.span{
+    width: 45%;
+}
+.welcome{
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.climate{
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px 0 0 ;
+    
+}
+#climateImg{
+    margin-right: 5px;
+}
+.climate h1{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.climate .celcius{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+.taskbar{
+    background-color: #49004d;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 15px 50px 0  rgb(0, 0, 0);
+}
+.taskbar ul{
+    list-style-type: none;
+    padding: 0;
+}
+.taskbar li{
+    float: left;
+}
+.taskbar li a{
+    color: white;
+    display: block;
+    background-color: #710472;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 5px;
+    border-radius: 20px;
+}
+li a:hover{
+    background-color: #560159;
+}
+.principal{
+    display: flex;
+}
+.colum-left{
+    flex: 25%;
+
+}
+.colum-mid{
+    flex: 50% ;
+}
+.redesSociais{
+    margin-top: 50px;
+    text-align: center;
+}
+.mid{
+    
+    background-image: url(../img/illustration.jpg);
+    background-size: 850px 300px;
+
+    margin: 50px 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+.mid h1{
+    margin-top: 10px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.description{
+    margin: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+.minhaFoto{
+    width: 200px;
+    height: 200px;
+    background-image: url(../img/picture001.jpg);
+    background-size: 200px 200px;
+    background-position: center;
+    /*border: solid 5px ;*/
+    border-radius: 50%;
+    box-shadow: 5px 1px 30px black;
+}
+.BDay{
+    
+    height: 50px;
+    width: 300px;
+    margin: 20px 10px;
+    text-align: center;
+    /*background-color: rgba(44, 22, 73, 0.418);*/
+    padding: 20px;
+    border-radius: 10px;
+
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+
+}
+.BDay p{
+    font-size: 20px;
+}
+
+.content{
+    display: block  ;
+}
+.colum-right{
+    flex: 25%;
+}
+.footer{
+
+    background-color: #560159;
+    color: #FFF;
+    width: 100%;
+    height: 50px;    
+    text-align: center;
+    line-height: 50px;
+}
+.trabalhos{
+    text-align: center;
+}
+
+.academico{
+    border: #FFF solid 2px;
+    margin: 10px;
+    padding: 10px;
+}
+.academico h1{
+    
+    text-align :center;
+    background-color: #70047244;
+}
+
+
+.carrosel-imagens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carrosel-imagens .off{
+    display: none;
+}
+.carrosel-imagens .on{
+    display: inline;
+    /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+    animation: rodar 5s ;
+
+}
+@keyframes rodar {
+    0% {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+    100% {
+        transform: translateX(-1000px);
+        opacity: 0%;
+    }
+    
+}
+.container-conhecimentos{
+
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.466); /* Black w/opacity/see-through */
+
+    height: 500px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 30px;
+    
+}
+.conhecimentos{
+    position: relative;
+}
+#conhecimentos-top{
+    text-align: center;
+    padding: 20px;
+}
+.conhecimentos div{
+
+    background-color: rgb(4, 0, 255);
+    width: 300px;
+    height: 5px;
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    border-radius: 10px;
+
+    text-indent: 1.5em;
+    
+}
+.conhecimentos div span{
+    position: absolute;
+    top: -20px;
+    left: -23px;
+}

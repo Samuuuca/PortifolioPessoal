@@ -1,0 +1,46 @@
+@media screen and (max-width: 1024px) {
+    
+    .taskbar{
+        margin-top: 0;
+    }
+    .mid{
+        background-size: 1600px 800px;
+    }
+    .minhaFoto{
+        margin: 10px;
+    }
+    .colum-right, .colum-left{
+        display: none;
+    }
+    .trabalhos{
+        text-align: left;
+    }
+    .taskbar li a{
+        padding: 5px 10px;
+    }
+    .climate h1{
+        font-size: 21px;
+        
+    }
+    .climate span{
+        font-size: 16px;
+        
+    }
+
+}
+@media screen and (max-width: 800px) {
+
+    .span{
+        display: none;
+    }
+    .welcome{
+        margin-left: 10px ;
+        width: 100%;
+        padding: 5px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .mid{
+        flex-direction: column;
+    }
+}
