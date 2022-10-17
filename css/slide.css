@@ -1,0 +1,22 @@
+.container{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 886px;
+    height: 396px;
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .container{
+        
+        width: 296px;
+        height: 132px;
+        border: none;
+
+    }
+    .slide-img1{
+        width: 296px;
+        height: 132px;
+    }
+}

@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Portifolio Samuel Delphino </title>
+    <link rel="stylesheet" href="css/glide.core.min.css">
+    <link rel="stylesheet" href="css/glide.theme.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slide.css">
     <link rel="stylesheet" href="css/mobile-style.css">
 </head>
 <body>  
@@ -14,7 +17,8 @@
             <div class="welcome">
                 <h1>Bem-Vindo</h1>
                 <div class="infoClimate">
-                    <img id="climateImg" src="img/loading-loading-forever.gif" alt="clima" width="32px" height="32px">
+                    <img id="climateImg" src="img/climate/loading-loading-forever.gif" 
+                        alt="clima" width="32px" height="32px">
                     <div class="climate">  
                         <h1 class="city"> Permita o acesso a localização</h1>
                         <h2 class="celcius"><span></span></h2>
@@ -36,15 +40,18 @@
                 <h1>Redes Sociais</h1>
                 <div class="instagram">
                     <p>Instagram</p> 
-                    <img src="img/logos/instagram-logo.png" alt="Logo do instagram" width="20px" height="20px">
+                    <img src="img/logos/instagram-logo.png" alt="Logo do instagram" 
+                    width="20px" height="20px">
                 </div>
                 <div class="github">
                     <p>GitHub</p> 
-                    <img src="img/logos/github-logo.png" alt="Logo do GitHub" width="20px" height="20px">
+                    <img src="img/logos/github-logo.png" alt="Logo do GitHub" 
+                    width="20px" height="20px">
                 </div>
                 <div class="linkedin">
                     <p>Linkedin</p> 
-                    <img src="img/logos/linkedin-logo.png" alt="Logo do Linkedin" width="20px" height="20px">
+                    <img src="img/logos/linkedin-logo.png" alt="Logo do Linkedin" 
+                    width="20px" height="20px">
                 </div>
             </div>
         </div>
@@ -55,7 +62,8 @@
             </div>
             <div class="description"> 
                 <p> Olá eu sou Samuel, seja bem vindo <br> 
-                    este é o meu portifolio pessoal fiz esse site na intenção de me divulgar e divugar meu trabalhos, conhecimentos<br>
+                    este é o meu portifolio pessoal fiz esse site na intenção de me divulgar 
+                    e divugar meu trabalhos, conhecimentos<br>
                     e estudos.
                 </p>
             </div>
@@ -67,12 +75,22 @@
             </div>
             <div class="trabalhos">        
                 <h1> "Trabalhos" </h1>
-                    <p> Atualmente estão fazendo estagio na prefeitura de tapirai como auxiliar de informatica</p>
-                <div class="carrosel">
-                    <div class="carrosel-imagens">
-                        <img src="img/desmotivacional.png" alt="" class="off">
-                        <img src="img/picture001.jpg" alt="" class="off">
-                        <img src="img/pattern.png" alt="" class="off">
+                    <p> Atualmente estão fazendo estagio na prefeitura de 
+                        tapirai como auxiliar de informatica</p>
+                <div class="container">
+                    <div class="glide">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide"><img class="slide-img1" src="img/slide-img/desmotivacional.png" alt=""></li>
+                                <li class="glide__slide">2</li>
+                                <li class="glide__slide">3</liv>
+                            </ul>
+                        </div>
+              
+                        <div class="glide__arrows" data-glide-el="controls">
+                            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,6 +115,8 @@
                 <div class="conhecimentos">
                     <h1 id="conhecimentos-top">Conhecimentos</h1>
                     <div> <span>HTML</span> </div>
+                    <div class="css"><span>CSS</span></div>
+                    <div class="javascript"><span>JavaScript</span></div>
                 </div>
             </div>    
         </div>
@@ -110,5 +130,23 @@
         </footer>
     </div>
 <script src="source.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+
+<script>
+    const config = {
+        
+        type: "carousel",
+        perView: 1,
+        autoplay: 10000,
+        breakpoints: {
+
+            800:{
+                perView: 1
+            }
+        }
+    }
+
+    new Glide('.glide', config).mount()
+</script>
 </body>
 </html>

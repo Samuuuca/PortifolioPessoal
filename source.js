@@ -1,10 +1,5 @@
-
 getUserPosition();
 date();
-let x = setInterval(() => {
-  //carrocelImagens();
-}, 16000); 
-
 
 function date(){
 
@@ -33,31 +28,6 @@ function date(){
 }, 1000);
 }
 
-function carrocelImagens() {
-  
-  const carroselImagens = document.querySelector('.carrosel-imagens').querySelectorAll('.off')
-
-  carroselImagens[0].className = 'on';
-  carroselImagens[0].addEventListener('animationend', () => {
-  
-    console.log('Animation ended');
-    carroselImagens[0].className = 'off';
-
-    carroselImagens[1].className = 'on';
-  });
-  carroselImagens[1].addEventListener('animationend', () => {
-  
-    console.log('Animation ended');
-    carroselImagens[1].className = 'off';
-
-    carroselImagens[2].className = 'on';
-  });
-  carroselImagens[2].addEventListener('animationend', () => {
-    carroselImagens[2].className = 'off';
-  });
-  
-}
-
 function getUserPosition() {
   let url;
   navigator.geolocation.getCurrentPosition((pos) => {
@@ -71,10 +41,12 @@ function getUserPosition() {
 function fetchApi(url) {
     let city = document.querySelector('.city');
     let temp = document.querySelector('.celcius');
+    let format = document.querySelector('.welcome');
+    console.log(format)
     let ImgClimate = document.getElementById('climateImg');
     const Hora = new Date();
-    const result = Hora.getHours();
-    
+    const Horario = Hora.getHours();
+
     
     fetch(url).then((data) => {
       return data.json();
@@ -82,38 +54,39 @@ function fetchApi(url) {
     .then((data) => {
       let tempInCelsius = ((5/9) * (data.main.temp-32)).toFixed(1);
 
-      if( result >= 7 && result <= 17){
+      if( Horario >= 7 && Horario <= 17){
         if (tempInCelsius >= 20) {
           
-          ImgClimate.src = 'img/cliamte/sol-quente.png'
+          ImgClimate.src = 'img/climate/sol-quente.png'
         }
         else if (tempInCelsius >= 10 && tempInCelsius < 20 ) {
           
-          ImgClimate.src = 'img/cliamte/frio-dia.png'
+          ImgClimate.src = 'img/climate/frio-dia.png'
         
         } else {
           
-          ImgClimate.src = 'img/cliamte/neve.png'
+          ImgClimate.src = 'img/climate/neve.png'
         
         }
       }
       else{
         if (tempInCelsius >= 20) {
           
-          ImgClimate.src = 'img/cliamte/lua-quente.png'
+          ImgClimate.src = 'img/climate/lua-quente.png'
 
         }
         else if (tempInCelsius >= 10 && tempInCelsius < 20 ) {
           
-          ImgClimate.src = 'img/cliamte/lua-frio.png'
+          ImgClimate.src = 'img/climate/lua-frio.png'
         
         } else {
-          ImgClimate.src = 'img/cliamte/neve.png'
+          ImgClimate.src = 'img/climate/neve.png'
+          ImgClimate.width = '50px'
         
         }
         
       }
-
+      format.style.display = 'flex'
       city.innerText = `${data.name} `;
       temp.innerText = `${tempInCelsius}°C`;
       
