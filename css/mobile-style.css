@@ -23,6 +23,9 @@
         margin: 0;
         
     }
+    .widgets{
+        flex-direction: column;
+    }
 
 }
 @media screen and (max-width: 800px) {
@@ -44,13 +47,9 @@
     }
     .container-conhecimentos{
 
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.466); /* Black w/opacity/see-through */
-    
         height: 500px;
         width: 100%;
         border-radius: 10px;
-        margin: 0 30px;
         
     }
 }

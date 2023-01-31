@@ -4,28 +4,31 @@ date();
 function date(){
 
   const dateBD = document.getElementById('dateBD')
-    
-  let a = 'Oct 21, 2022 00:00:00'
+
+  let ano = new Date().getFullYear()
+
+  let a = `Oct 21, ${ano} 00:00:00`
             //'Oct 21, 2022 00:00:00'
 
   let date = new Date(a).getTime()
-    console.log(date, dateBD);
 
   let x = setInterval(() => {
     
-  let now = new Date().getTime()
-    
-  let diferença = date - now
+    let now = new Date().getTime()
+      
+    let diferença = now - date
 
-  let day = Math.floor( diferença / ( 1000 * 60 * 60 * 24 ))
-  let horas = Math.floor((diferença % ( 1000 * 60 * 60 * 24 )) / ( 100 * 60 * 60))
-  let minutos = Math.floor((diferença % ( 1000 * 60 * 60 )) / ( 1000 * 60 ))
-  let segundos = Math.floor((diferença % ( 1000 * 60)) / 1000)
+    let day = Math.floor( diferença / ( 1000 * 60 * 60 * 24 ))
+    let horas = Math.floor((diferença % ( 1000 * 60 * 60 * 24 )) / ( 100 * 60 * 60))
+    let minutos = Math.floor((diferença % ( 1000 * 60 * 60 )) / ( 1000 * 60 ))
+    let segundos = Math.floor((diferença % ( 1000 * 60)) / 1000)
 
-  let format = `${day}d ${horas}h ${minutos}m ${segundos}s`.replace('-', '', '3') 
-    dateBD.innerHTML = format
+    let format = `${day}d ${horas}h ${minutos}m ${segundos}s`.replace('-', '', '3') 
 
-}, 1000);
+    dateBD.innerText = format
+  }, 1000);
+
+  return console.log('Date funcionando')
 }
 
 function getUserPosition() {
@@ -38,7 +41,8 @@ function getUserPosition() {
   });
 }
 
-function fetchApi(url) {
+function fetchApi(url){
+  
     let city = document.querySelector('.city');
     let temp = document.querySelector('.celcius');
     let format = document.querySelector('.welcome');
@@ -95,5 +99,19 @@ function fetchApi(url) {
       city.innerText = `Permita o acesso a localização`;
       temp.innerText = `-`;
     })
-  }
+}
+
+function getWindow(){
+
+  const telaLargura = window.innerWidth
+  const telaAltura = window.innerHeight
   
+  let randomLargura = Math.floor(Math.random() * telaLargura)
+  let randomAltura = telaAltura - Math.floor(Math.random() * telaAltura)
+
+  scr
+  
+  
+  return randomAltura
+  
+}
