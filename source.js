@@ -16,7 +16,7 @@ function date(){
     
     let now = new Date().getTime()
       
-    let diferença = now - date
+    let diferença = date - now
 
     let day = Math.floor( diferença / ( 1000 * 60 * 60 * 24 ))
     let horas = Math.floor((diferença % ( 1000 * 60 * 60 * 24 )) / ( 100 * 60 * 60))
